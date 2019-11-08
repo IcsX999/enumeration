@@ -21,12 +21,7 @@ t) thr=${OPTARG};;
 esac
 done
 
-echo "$seclist_path"
-echo "$host"
-echo "$ext"
-echo "$thr"
-
-[ $# -lt 4 ] && echo "$usage" && exit
+[ $# -lt 4 ] && echo "${usage}" && exit
 
 [ -n $name ] && name="$name-"
 [ -z $thr ] && thr=25
