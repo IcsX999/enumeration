@@ -23,7 +23,7 @@ done
 
 [ $# -lt 4 ] && echo "${usage}" && exit
 
-[ -n $name ] && name="$name-"
+[ -z $name ] && name="" || name="$name-"
 [ -z $thr ] && thr=25
 
 echo -e "${BGreen}[*] Running nikto in background${Color_Off}\n"
