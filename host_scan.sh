@@ -26,7 +26,7 @@ scan () {
 	then
 		echo -e "${BRed}[!] no TCP ports open${Color_Off}"
 		echo -e "${BRed}[-] try with UDP${Color_Off}"
-		/usr/bin/sudo usr/bin/nmap -T5 -sU $host
+		/usr/bin/sudo /usr/bin/nmap -T5 -sU $host
 	else
 		echo -e "${BGreen}[*] Starting NMAP Service Version Scan${Color_Off}\n"
 		/usr/bin/nmap -T5 -p${ports} -sC -sV -oN vers-1 $host

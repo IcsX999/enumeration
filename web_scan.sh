@@ -30,7 +30,7 @@ echo -e "${BGreen}[*] Running nikto in background${Color_Off}\n"
 echo -e "${BGreen}[*] Check nikto.out file${Color_Off}\n"
 /usr/bin/nikto -host "$host" >> nikto.out &
 
-/usr/bin/gobuster -u "$host" -w "$seclist_path/Discovery/Web-Content/common.txt" -t ${thr} -o ${name}common-1 -x "$ext" -s '200,204,301,302,307,401,403'
-/usr/bin/gobuster -u "$host" -w "$seclist_path/Discovery/Web-Content/big.txt" -t ${thr} -o ${name}big-1 -x "$ext" -s '200,204,301,302,307,401,403'
-/usr/bin/gobuster -u "$host" -w "$seclist_path/Discovery/Web-Content/directory-list-2.3-medium.txt" -t ${thr} -o ${name}dirmed-1 -x "$ext" -s '200,204,301,302,307,401,403'
+/usr/bin/gobuster dir -u "$host" -w "$seclist_path/Discovery/Web-Content/common.txt" -t ${thr} -o ${name}common-1 -x "$ext" -s '200,204,301,302,307,401,403'
+/usr/bin/gobuster dir -u "$host" -w "$seclist_path/Discovery/Web-Content/big.txt" -t ${thr} -o ${name}big-1 -x "$ext" -s '200,204,301,302,307,401,403'
+/usr/bin/gobuster dir -u "$host" -w "$seclist_path/Discovery/Web-Content/directory-list-2.3-medium.txt" -t ${thr} -o ${name}dirmed-1 -x "$ext" -s '200,204,301,302,307,401,403'
 
